@@ -1,6 +1,9 @@
-<h1>Create a new note</h1>
+<h3 style="color:gray;"><%= link_to 'Home', notes_path%></h3>
+<h1 style="color:blue;">-Create a new note-</h1>
 <%= form_for @note do |f|%>
-  <%= f.label :title %>
+  <h2><%= f.label :Title %>:</h2>
+  <%= f.text_field :title %>
+  <h2><%= f.label :Body %>:</h2>
   <%= f.text_area :body %>
   <%= f.submit %>
 <%end%>

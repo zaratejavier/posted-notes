@@ -1,5 +1,4 @@
-<h1>haha</h1>
-<% @notes.each do |note|%>
-  <h2><%note.body%></h2>
-<%end%>
+<%= link_to 'Home', notes_path%>
+<h1><%= @note.title%></h1>
+<p><%= @note.body%></p>
 
