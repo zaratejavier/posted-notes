@@ -1,0 +1,11 @@
+<h1>Notes</h1>
+<%= link_to "Create new note", new_note_path%>
+<% @notes.each do |note| %>
+  <h2><%= note.title%></h2>
+  <%# <a href='/'> %>
+  <%= link_to 'Show Note', note_path(note)%>
+  <% link_to 'Edit Note', edit_note_path(note)%>
+  <% link_to 'Delete Note', note_path(note), method: :delete%>
+
+  <%# <a href="/pages/1">Show Page</a> %>
+<% end %>
